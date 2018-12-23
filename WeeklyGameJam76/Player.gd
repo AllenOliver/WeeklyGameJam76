@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var walkSpeed = 50
+var walkSpeed = 500
 var motion = Vector2()
 
 
