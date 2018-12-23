@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var walkSpeed = 500
+var walkSpeed = 250
 var motion = Vector2()
 
 
@@ -11,19 +11,27 @@ func _physics_process(delta):
 func movement():
 	if Input.is_action_pressed("ui_up"):
 		motion.y = -walkSpeed
-		#$AnimatedSprite.play("WalkUp")
+		$AnimatedSprite.playing = true
+
 	elif Input.is_action_pressed("ui_down"):
 		motion.y = walkSpeed
-		#$AnimatedSprite.play("WalkDown")
+		$AnimatedSprite.playing = true
+
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -walkSpeed
-		#$AnimatedSprite.play("WalkLeft")
+		$AnimatedSprite.playing = true
+		$AnimatedSprite.flip_h = true
+
 	elif Input.is_action_pressed("ui_right"):
 		motion.x = walkSpeed
-		#$AnimatedSprite.play("WalkRight")
+		$AnimatedSprite.playing = true
+		$AnimatedSprite.flip_h = false
+
 	else:
 		motion.x = 0
 		motion.y = 0
+		$AnimatedSprite.playing = false
+		$AnimatedSprite.frame = 0
 	motion = move_and_slide(motion)
 	pass
 
