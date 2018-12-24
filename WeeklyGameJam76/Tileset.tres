@@ -10,7 +10,7 @@ extents = Vector2( 10, 10 )
 [sub_resource type="StreamTexture" id=2]
 
 flags = 0
-load_path = "res://.import/0x72_16x16DungeonTileset.v4.png-25fcdef21c35d2ec51021ae953b99e05.stex"
+load_path = ""
 _sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=3]

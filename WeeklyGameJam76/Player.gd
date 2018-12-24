@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-var walkSpeed = 250
+var walkSpeed = 200
 var motion = Vector2()
-
 
 func _physics_process(delta):
 	movement()
+
 	pass
 
 func movement():
@@ -34,4 +34,5 @@ func movement():
 		$AnimatedSprite.frame = 0
 	motion = move_and_slide(motion)
 	pass
+
 
